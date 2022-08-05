@@ -32,7 +32,7 @@ column = st.sidebar.selectbox('Selecione tipo de informação', colunas)
 df = df[df['state'] == state]
 
 # CONFIGURANDO OS EIXOS DO GRÁFICO (quais serão as informações de cada eixo)
-fig = px.line(df, x='date', y=column, title=column + ' - ' + state)
+fig = px.line(df, x='date', y=column, title= state)
 
 # CONFIGURANDO O LAYOUT DO GRÁFICO (nome dos eixos e centralização)
 fig.update_layout(xaxis_title='Data', yaxis_title=column.upper(), title={'x':0.5})
