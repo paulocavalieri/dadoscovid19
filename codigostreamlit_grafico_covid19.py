@@ -15,14 +15,14 @@ import streamlit as st
 df = pd.read_csv('https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv')
 
 # MELHORANDO O NOME DAS COLUNAS DA TABELA
-df = df.rename(columns={'newDeaths': 'Novos Óbitos', 'newCases': 'Novos Casos', 'deaths_per_100k_inhabitants': 'Mortes por 100 mil habitantes', 'totalCases_per_100k_inhabitants': 'Casos por 100 mil habitantes'})
+df = df.rename(columns={'newDeaths': 'Novos Óbitos', 'newCases': 'Novos Casos', 'deaths': 'Total de óbitos', 'totalCases': 'Total de casos'})
 
 # SELEÇÃO DO ESTADO
 estados = list(df['state'].unique())
 state = st.sidebar.selectbox('Selecione o Estado ou TOTAL', estados)
 
 # SELEÇÃO DA COLUNA
-colunas = ['Novos Óbitos', 'Novos Casos', 'Mortes por 100 mil habitantes', 'Casos por 100 mil habitantes']
+colunas = ['Novos Óbitos', 'Novos Casos', 'Total de óbitos', 'Total de casos']
 column = st.sidebar.selectbox('Selecione tipo de informação', colunas)
 
 # SELEÇÃO DAS LINHAS QUE PERTENCEM AO ESTADO
