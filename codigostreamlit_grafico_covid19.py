@@ -15,7 +15,7 @@ import streamlit as st
 df = pd.read_csv('https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv')
 
 # MELHORANDO O NOME DAS COLUNAS DA TABELA
-df = df.rename(columns={'newDeaths': 'NOVOS ÓBITOS', 'newCases': 'NOVOS CASOS', 'deaths': 'Total de óbitos', 'totalCases': 'Total de casos'})
+df = df.rename(columns={'newDeaths': 'Novos Óbitos', 'newCases': 'Novos Casos', 'deaths': 'Total de óbitos', 'totalCases': 'Total de casos'})
 
 # MELHORANDO O NOME DE 'TOTAL' PARA 'BRASIL'
 df['state'] = df['state'].replace(['TOTAL'], 'Brasil')
