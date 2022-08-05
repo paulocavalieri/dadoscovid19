@@ -19,6 +19,7 @@ df = df.rename(columns={'newDeaths': 'Novos Óbitos', 'newCases': 'Novos Casos',
 
 # SELEÇÃO DO ESTADO
 estados = list(df['state'].unique())
+estados[1] = 'Brasil'
 state = st.sidebar.selectbox('Selecione o Estado ou Brasil', estados)
 
 # SELEÇÃO DA COLUNA
