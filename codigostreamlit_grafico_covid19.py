@@ -16,7 +16,6 @@ df = pd.read_csv('https://raw.githubusercontent.com/wcota/covid19br/master/cases
 
 # MELHORANDO O NOME DAS COLUNAS DA TABELA
 df = df.rename(columns={'newDeaths': 'Novos Óbitos', 'newCases': 'Novos Casos', 'deaths': 'Total de óbitos', 'totalCases': 'Total de casos'})
-df = df.rename(line={'TOTAL':'Brasil'})
 
 # SELEÇÃO DO ESTADO
 estados = list(df['state'].unique())
